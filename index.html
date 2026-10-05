@@ -1,13 +1,136 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JAWSMOTO — All Bite. No Bark.</title><link rel="stylesheet" href="style.css"></head><body>
-<header><a class="logo" href="#">JAWSMOTO</a><nav><a href="#shop">SHOP</a><a href="#about">ABOUT</a><a href="#cart">CART <span id="count">0</span></a></nav></header>
-<section class="hero"><div><small>E-MOTO CLOTHES</small><h1>ALL BITE.<br>NO BARK.</h1><p>just some kids who ride.</p><a class="button" href="#shop">SHOP NOW</a></div><div class="bike" aria-hidden="true"><i></i><i></i><b></b></div></section>
-<div class="ticker">JAWSMOTO • E-MOTO CLOTHES • ALL BITE. NO BARK. • JAWSMOTO • E-MOTO CLOTHES •</div>
-<section id="shop"><small>THE DROP</small><h2>SHOP JAWSMOTO</h2><div class="grid">
-<article><div class="art sheisty"><span>JAWS</span></div><div class="info"><b>JAWSMOTO SHEISTY</b><strong>$12</strong></div><button data-name="JAWSMOTO SHEISTY" data-price="12">ADD TO CART</button></article>
-<article><div class="art keychain"><span>JAWS<br><em>MOTO</em></span></div><div class="info"><b>JAWSMOTO KEYCHAIN</b><strong>$8</strong></div><button data-name="JAWSMOTO KEYCHAIN" data-price="8">ADD TO CART</button></article>
-<article><div class="art tee"><span>JAWS</span></div><div class="info"><b>JAWSMOTO T-SHIRT</b><strong>$25</strong></div><button data-name="JAWSMOTO T-SHIRT" data-price="25">ADD TO CART</button></article>
-</div></section>
-<section id="about" class="about"><small>WHO WE ARE</small><h2>JUST SOME KIDS<br>WHO RIDE.</h2><p>JAWSMOTO is e-moto clothing made around riding, building, and doing your own thing.</p></section>
-<section id="cart"><div class="carthead"><h2>YOUR CART</h2><button id="clear">CLEAR</button></div><div id="items">Your cart is empty.</div><div class="total"><b>TOTAL</b><b id="total">$0</b></div><button id="checkout" class="checkout">CHECKOUT</button><small>Payment checkout will be connected next.</small></section>
-<footer><b>JAWSMOTO</b><span>ALL BITE. NO BARK.</span><span>© 2026 JAWSMOTO</span></footer>
-<script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<meta name="description" content="JAWSMOTO — EAT. SLEEP. RIDE.">
+<title>JAWSMOTO — EAT. SLEEP. RIDE.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div>
+
+<header class="nav">
+  <a class="brand" href="#home" aria-label="JAWSMOTO home">
+    <img src="images/jawz-logo.jpg" alt="JAWZ MOTO logo">
+  </a>
+  <nav class="navlinks">
+    <a href="#shop">SHOP</a>
+    <a href="#story">ABOUT</a>
+  </nav>
+  <button class="bag" id="bagBtn">BAG <span id="bagCount">0</span></button>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-copy">
+    <p class="eyebrow">JAWSMOTO / EST. 2026</p>
+    <h1>JAWS<span>MOTO</span></h1>
+    <div class="slash"></div>
+    <p class="tagline">EAT. SLEEP. RIDE.</p>
+    <a class="primary" href="#shop">SHOP THE DROP <span>↗</span></a>
+  </div>
+  <div class="hero-meta"><span>01 / 02</span><span>STREET × E-MOTO</span></div>
+  <div class="scroll">SCROLL <i></i></div>
+</section>
+
+<section class="intro" id="story">
+  <div class="intro-left">
+    <span class="section-no">01</span>
+    <h2>JUST SOME<br><em>KIDS WHO RIDE.</em></h2>
+  </div>
+  <div class="intro-right">
+    <p>JAWSMOTO is built around the ride. Dark gear. Sharp details. No fake polish.</p>
+    <p class="muted">Made for the people who'd rather be outside riding than sitting inside talking about it.</p>
+    <a class="textlink" href="#shop">ENTER THE DROP <span>→</span></a>
+  </div>
+</section>
+
+<section class="shop" id="shop">
+  <div class="section-head">
+    <div><span class="section-no">02</span><h2>THE DROP</h2></div>
+    <span class="count">02 PRODUCTS / 01 DROP</span>
+  </div>
+
+  <div class="product-grid">
+    <article class="product-card" data-product="sheisty">
+      <button class="product-image" aria-label="View Sheisty">
+        <img src="images/sheisty-front.jpg" alt="Black JAWSMOTO sheisty front">
+        <span class="view">VIEW PRODUCT ↗</span>
+      </button>
+      <div class="product-info">
+        <div><span class="type">01 / HEADWEAR</span><h3>SHEISTY</h3></div>
+        <span class="price">AVAILABLE</span>
+      </div>
+    </article>
+
+    <article class="product-card" data-product="keychain">
+      <button class="product-image" aria-label="View Keychain">
+        <img src="images/keychain-front.jpg" alt="Black rectangular JAWSMOTO keychain front">
+        <span class="view">VIEW PRODUCT ↗</span>
+      </button>
+      <div class="product-info">
+        <div><span class="type">02 / ACCESSORY</span><h3>KEYCHAIN</h3></div>
+        <span class="price">AVAILABLE</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="statement">
+  <div class="statement-bg"></div>
+  <div class="statement-copy">
+    <span class="section-no">03</span>
+    <h2>EAT.<br>SLEEP.<br><span>RIDE.</span></h2>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">JAWSMOTO</div>
+  <div class="footer-center">EAT. SLEEP. RIDE.</div>
+  <div class="footer-right">© 2026 JAWSMOTO</div>
+</footer>
+</main>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-inner">
+    <button class="close" id="closeDrawer">CLOSE ×</button>
+    <div class="drawer-images">
+      <div class="detail-photo"><img id="detailFront" src="" alt=""></div>
+      <div class="detail-photo"><img id="detailBack" src="" alt=""></div>
+    </div>
+    <div class="detail-copy">
+      <span class="type" id="detailType"></span>
+      <h2 id="detailName"></h2>
+      <p id="detailDesc"></p>
+      <div class="detail-row" id="sizeRow">
+        <span>SIZE</span>
+        <div class="sizes">
+          <button>S</button><button>M</button><button>L</button><button>XL</button>
+        </div>
+      </div>
+      <button class="add" id="addBtn">ADD TO BAG <span>+</span></button>
+    </div>
+  </div>
+</div>
+
+<div class="bag-drawer" id="bagDrawer" aria-hidden="true">
+  <div class="bag-panel">
+    <button class="close" id="closeBag">CLOSE ×</button>
+    <span class="section-no">BAG</span>
+    <h2>YOUR BAG</h2>
+    <div id="bagItems"></div>
+    <button class="add" id="checkoutBtn">CHECKOUT <span>↗</span></button>
+    <p class="checkout-note">Checkout will be connected after the store payment setup is finished.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
