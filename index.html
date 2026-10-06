@@ -194,8 +194,14 @@ footer{
   <div class="drawer-inner">
     <button class="close" id="closeDrawer">CLOSE ×</button>
     <div class="drawer-images">
-      <div class="detail-photo front-photo"><img id="detailFront" src="" alt=""></div>
-      <div class="detail-photo back-photo"><img id="detailBack" src="" alt=""></div>
+      <div class="detail-photo front-photo">
+        <span class="photo-label">FRONT</span>
+        <img id="detailFront" src="" alt="">
+      </div>
+      <div class="detail-photo back-photo">
+        <span class="photo-label">BACK</span>
+        <img id="detailBack" src="" alt="">
+      </div>
     </div>
     <div class="detail-copy">
       <span class="type" id="detailType"></span>
@@ -214,12 +220,17 @@ footer{
 
 <div class="bag-drawer" id="bagDrawer" aria-hidden="true">
   <div class="bag-panel">
-    <button class="close" id="closeBag">CLOSE ×</button>
-    <span class="section-no">BAG</span>
-    <h2>YOUR BAG</h2>
+    <div class="bag-top">
+      <div><span class="section-no">YOUR ORDER</span><h2>YOUR BAG</h2></div>
+      <button class="close bag-close" id="closeBag">CLOSE ×</button>
+    </div>
+    <div class="bag-rule"></div>
     <div id="bagItems"></div>
-    <button class="add cool-btn" id="checkoutBtn"><span class="btn-label">CHECKOUT</span><span>↗</span></button>
-    <p class="checkout-note">Checkout will be connected after the store payment setup is finished.</p>
+    <div class="bag-summary">
+      <div><span>SUBTOTAL</span><strong id="bagTotal">—</strong></div>
+      <small>Shipping and payment are calculated at checkout.</small>
+    </div>
+    <button class="add cool-btn checkout-btn" id="checkoutBtn"><span class="btn-label">CHECKOUT</span><span>→</span></button>
   </div>
 </div>
 
