@@ -17,14 +17,14 @@ button{color:inherit;background:none;border:0;cursor:pointer}
 .navlinks a{opacity:.72;transition:.25s}.navlinks a:hover{opacity:1}
 .bag{border:1px solid #3a3a3a;padding:11px 15px}.bag span{color:#aaa;margin-left:5px}
 .hero{height:min(920px,100svh);min-height:700px;position:relative;display:grid;place-items:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url("images/hero.jpg") center/cover no-repeat;filter:contrast(1.08) brightness(.68)}
+.hero-bg{position:absolute;inset:0;background:url("images/hero-brick.jpg") center 42%/cover no-repeat;filter:contrast(1.15) brightness(.72) saturate(.7)}
 .hero-vignette{position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,transparent 0,rgba(0,0,0,.18) 38%,rgba(0,0,0,.78) 100%),linear-gradient(90deg,rgba(0,0,0,.3),transparent 35%,rgba(0,0,0,.45))}
-.hero-copy{position:relative;z-index:2;text-align:center;margin-top:40px}
+.hero-copy{position:relative;z-index:2;text-align:left;margin-top:70px;margin-left:6vw;justify-self:start;max-width:620px}
 .eyebrow,.type,.count,.section-no{font-size:9px;font-weight:800;letter-spacing:3px;color:#b4b4b1}
 .hero h1{font-family:"Barlow Condensed",Impact,sans-serif;font-style:italic;font-size:clamp(90px,16vw,230px);line-height:.72;letter-spacing:-7px;margin:20px 0 28px;text-shadow:0 10px 35px #000}
 .hero h1 span{display:block;font-size:.27em;letter-spacing:13px;margin-left:18px;margin-top:28px}
-.slash{height:1px;width:150px;background:#fff;margin:0 auto 20px;opacity:.7}
-.tagline{font-size:13px;letter-spacing:7px;font-weight:700;margin:0 0 34px}
+.slash{height:1px;width:180px;background:#fff;margin:0 0 20px;opacity:.7}
+.hero-desc{font-size:11px;line-height:1.7;letter-spacing:3px;color:#c9c9c6;margin:0 0 18px;font-weight:700}.tagline{font-size:13px;letter-spacing:7px;font-weight:700;margin:0 0 34px}
 .primary{display:inline-flex;align-items:center;gap:26px;border:1px solid rgba(255,255,255,.55);padding:16px 24px;font-size:10px;font-weight:900;letter-spacing:2.2px;transition:.25s;background:rgba(0,0,0,.25)}
 .primary:hover{background:#fff;color:#000}
 .primary span{font-size:15px}
@@ -149,4 +149,40 @@ footer{display:grid;grid-template-columns:1fr 1fr 1fr;padding:36px 5%;font-size:
  .nav{height:68px;padding:0 5%}.brand{width:125px}.brand img{width:112px}.bag{min-width:78px;height:38px;padding:0 11px}
  .primary{min-width:205px;padding:15px 18px}.section-head h2{font-size:56px}.product-grid{gap:14px}.product-image{aspect-ratio:1/1}.view{left:14px;bottom:14px;min-width:145px;padding:11px 12px}
  .drawer-images{grid-template-columns:1fr;padding-top:82px}.detail-copy{padding-top:25px}.detail-copy h2{font-size:58px}.sizes{grid-template-columns:repeat(4,1fr)}
+}
+
+
+/* JAWSMOTO BRICK / PRODUCT POLISH */
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.38) 35%,rgba(0,0,0,.12) 60%,rgba(0,0,0,.55) 100%),linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.72));z-index:1}
+.hero-copy,.hero-meta,.scroll{z-index:3}
+.hero-copy h1{text-align:left;text-shadow:0 8px 35px #000}
+.hero-copy h1 span{margin-left:8px}
+.hero-copy .primary{margin-top:4px}
+.hero-meta{left:6vw;right:6vw}
+
+/* Make every CTA readable and keep the arrow separated from text. */
+.cool-btn{gap:22px;min-height:46px;padding-left:18px!important;padding-right:18px!important;line-height:1;letter-spacing:2px;text-align:center}
+.view.cool-btn{position:absolute;display:inline-flex!important;align-items:center;justify-content:center;gap:18px;min-width:184px;min-height:50px;left:24px;bottom:24px;padding:0 17px!important;background:rgba(5,5,5,.9);border:1px solid rgba(255,255,255,.82);color:#fff;box-shadow:0 10px 35px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.04) inset}
+.view.cool-btn .btn-label{display:block;position:static;white-space:nowrap}
+.view.cool-btn span:last-child{position:static;margin:0;font-size:16px;line-height:1}
+.view.cool-btn:hover{background:#fff;color:#000;border-color:#fff;box-shadow:0 15px 45px rgba(0,0,0,.55)}
+
+/* Different environments behind each product so the cards don't feel like cut-outs. */
+.product-card:first-child .product-image{background:radial-gradient(circle at 50% 55%,rgba(255,255,255,.09),transparent 38%),linear-gradient(135deg,#141414,#050505 68%),url("images/texture.jpg") center/cover!important}
+.product-card:nth-child(2) .product-image{background:radial-gradient(circle at 50% 45%,rgba(180,180,180,.10),transparent 28%),linear-gradient(145deg,#181818,#070707 62%),url("images/texture.jpg") center/cover!important}
+.product-card:nth-child(2) .product-image::after{background:linear-gradient(115deg,rgba(255,255,255,.06),transparent 30%,rgba(255,255,255,.025) 55%,transparent 70%),radial-gradient(circle at 70% 30%,rgba(255,255,255,.08),transparent 22%)}
+.product-card:nth-child(2) .product-image img{padding:34px;filter:contrast(1.12) brightness(1.08) drop-shadow(0 18px 30px rgba(0,0,0,.55))}
+
+/* Product detail: shop-like gallery with a centered sheisty back view. */
+.drawer-images{align-items:start}
+.detail-photo{min-height:0}
+.detail-photo.back-photo img{object-position:center center;display:block;margin:0 auto}
+.drawer-images .back-photo{justify-self:center}
+
+@media(min-width:901px){
+  .drawer-images .front-photo{grid-column:1}.drawer-images .back-photo{grid-column:2}
+  .drawer-images:has(.back-photo) .back-photo{display:flex;align-items:center;justify-content:center}
+}
+@media(max-width:900px){
+  .hero-copy{margin-left:5vw;max-width:82vw}.hero-copy h1{font-size:23vw}
 }
